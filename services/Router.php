@@ -5,18 +5,18 @@ class Router {
     private UserController $controller;
     
     public function __construct() {
-        $this->controller = $controller;
+        $this->controller = new UserController();
     }
     
-    public function getController() : UserController {
-        return $this->category;
-    }
+    // public function getController() : UserController {
+    //     return $this->category;
+    // }
 
-    public function setController(UserController $controller) : void {
-        $this->controller = $controller;
-    }
+    // public function setController(UserController $controller) : void {
+    //     $this->controller = $controller;
+    // }
     
-    public function routing(string $route) : UserController {
+    public function checkRoute(string $route) : void {
         
         if ($route === "users") {
             $this->route -> UserController::index;
